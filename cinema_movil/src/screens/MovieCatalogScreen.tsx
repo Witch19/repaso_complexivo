@@ -20,10 +20,12 @@ export default function MovieCatalogScreen() {
   return (
     <FlatList
       data={movies}
-      keyExtractor={(item, index) => index.toString()}
+      keyExtractor={(item) => item._id?.toString()}
       renderItem={({ item }) => (
-        <View>
-          <Text>{item.title}</Text>
+        <View style={{ padding: 10 }}>
+          <Text>{item.movie_title}</Text>
+          <Text>{item.genre} - {item.rating}</Text>
+          <Text>{item.duration_min} min</Text>
         </View>
       )}
     />

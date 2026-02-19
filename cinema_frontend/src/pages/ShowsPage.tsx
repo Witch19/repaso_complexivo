@@ -21,7 +21,7 @@ export default function ShowsPage() {
       <h2>Funciones</h2>
       {shows.map((s) => (
         <div key={s.id}>
-          <b>{s.title}</b> - {s.room} - ${s.price}
+          <b>{s.movie_title}</b> - {s.room} - ${s.price} - Seats: {s.available_seats}
         </div>
       ))}
     </div>
